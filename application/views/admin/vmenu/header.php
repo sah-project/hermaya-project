@@ -1,5 +1,5 @@
 
-			<div id="header" class="">
+			<div id="header" class="sticky clearfix">
 				<!-- TOP NAV -->
 				<header id="topNav">
 					<div class="container">
