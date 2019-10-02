@@ -1,4 +1,5 @@
 <!-- REVOLUTION SLIDER -->
+
 			<div class="slider fullwidthbanner-container roundedcorners">
 				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
 					<ul class="hide">
@@ -118,6 +119,7 @@
 				</div>
 			</section>
 			<!-- /WELCOME -->
+			
 			<!-- -->
 			<section class="alternate">
 				<div class="container">
