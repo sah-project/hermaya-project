@@ -38,7 +38,7 @@
 								<h2 class="panel-title">Form Posting Berita</h2>
 							</div>
 							<div class="panel-body">
-								<form class="" action="../admin/manberita/cberita/simpanberita" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+								<form class="" action="<?php echo base_url(); ?>/admin/manberita/cberita/simpanberita" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
 									<fieldset>
 										<!-- required [php action request] -->
 										<div class="row">
