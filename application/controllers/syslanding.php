@@ -9,10 +9,16 @@ class syslanding extends CI_Controller {
         $this->load->library('form_validation');
     }
 
-	public function index()
-	{
-		$this->load->view('dashboard/index');
-	}
+   public function index(){
+        $data = array (
+            'sheader' => 'dashboard/ext/sheader',
+            'header' => 'dashboard/vmenu/header',
+            'content' => 'dashboard/pages/index',
+            'footer'=> 'dashboard/vfooter/footer',
+            'sfooter'=> 'dashboard/ext/sfooter',     
+        );
+        $this->load->view("dashboard/index", $data);
+    }
 
 	
 }
