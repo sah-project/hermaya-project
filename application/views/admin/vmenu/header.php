@@ -38,7 +38,7 @@
 										</a>
 									</li>
 									<!-- PAGES -->
-									<li class="dropdown <?php echo $this->uri->segment(2) == 'manage-berita' ? 'active': '' ?>">
+									<li class="dropdown <?php echo $this->uri->segment(2) == 'manage-data' ? 'active': '' ?>">
 										<a class="dropdown-toggle" href="#">
 											MANAGEMENT DATA
 										</a>
