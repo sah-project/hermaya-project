@@ -16,12 +16,12 @@
 			<section>
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3 col-sm-3">
+						<div class="col-md-2 col-sm-2">
 							<!-- side navigation -->
 							<div class="side-nav">
 								<div class="side-nav-head">
 									<button class="fa fa-bars"></button>
-									<h4>SUB MENU</h4>
+									<h4>MANAGEMENT</h4>
 								</div>
 								<ul class="list-group list-unstyled">
 									<li class="list-group-item"><a href="shortcode-forms.html">Agenda</a></li>
@@ -31,11 +31,11 @@
 							</div>
 							<!-- /side navigation -->
 						</div>
-						<div class="col-md-9 col-sm-9">
+						<div class="col-md-10 col-sm-10">
 						<!-- Useful Elements -->
 						<div class="panel panel-default">
 							<div class="panel-heading panel-heading-transparent">
-								<h2 class="panel-title">Form Validation</h2>
+								<h2 class="panel-title">Form Posting Berita</h2>
 							</div>
 							<div class="panel-body">
 								<form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
