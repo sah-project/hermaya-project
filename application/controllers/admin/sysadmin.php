@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class syslanding extends CI_Controller {
+class sysadmin extends CI_Controller {
 
    public function __construct()
     {
@@ -11,11 +11,11 @@ class syslanding extends CI_Controller {
 
    public function index(){
         $data = array (
-            'sheader' => 'dashboard/ext/sheader',
-            'header' => 'dashboard/vmenu/header',
-            'content' => 'dashboard/pages/index',
-            'footer'=> 'dashboard/vfooter/footer',
-            'sfooter'=> 'dashboard/ext/sfooter',     
+            'sheader' => 'admin/ext/sheader',
+            'header' => 'admin/vmenu/header',
+            'content' => 'admin/pages/index',
+            'footer'=> 'admin/vfooter/footer',
+            'sfooter'=> 'admin/ext/sfooter',     
         );
         $this->load->view("dashboard/index", $data);
     }
