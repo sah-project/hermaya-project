@@ -6,7 +6,9 @@ class cberita  extends CI_Controller {
    public function __construct()
     {
         parent::__construct();
+        $this->load->model('admin/model_berita');
         $this->load->library('form_validation');
+
     }
 
    public function index(){
@@ -23,14 +25,14 @@ class cberita  extends CI_Controller {
     public function simpanberita (){          
         if (!empty($_POST)) {   
 
-            $master = array(
+            $data = array(
                 'tanggal' => $this->security->xss_clean($this->input->post('tanggal')),
                 'judul' =>$this->security->xss_clean($this->input->post('judul')),
                 'konten' =>$this->security->xss_clean($this->input->post('konten')),
                 );
-            $action = $this->berita_model->save_master($master);
+            $action = $this->model_berita->simpan_berita($data);
                 if ($action==true) {
-                    redirect('master');
+                    redirect('admin');
                 } else {
                     echo "something wrong";
                 }  
