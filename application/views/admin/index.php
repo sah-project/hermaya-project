@@ -12,6 +12,7 @@
 		
 		<!-- Sheader -->
 		<?php $this->load->view($sheader) ?>
+		<?php $this->load->view($sheader_datatable) ?>
 		
 		<!-- Sheader -->
 	</head>
@@ -48,6 +49,7 @@
 <!-- spesial script summernote -->
 <!-- Sfooter	 -->
 <?php $this->load->view($sfooter) ?>
+<?php $this->load->view($sfooter_datatable) ?>
 <!--  End Sfooter	 -->
 		
 	</body>

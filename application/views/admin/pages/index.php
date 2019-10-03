@@ -1,6 +1,5 @@
 			<section class="page-header page-header-xs">
 				<div class="container">
-
 					<h1>MANAGEMENT BERITA</h1>
 
 					<!-- breadcrumbs -->
@@ -30,81 +29,110 @@
 								</ul>
 							</div>
 							<!-- /side navigation -->
-						</div>
-						<div class="col-md-10 col-sm-10">
-						<!-- Useful Elements -->
-						<div class="panel panel-default">
-							<div class="panel-heading panel-heading-transparent">
-								<h2 class="panel-title">Form Posting Berita</h2>
-							</div>
-							<div class="panel-body">
-								<form class="" action="<?php echo base_url();?>/admin/manberita/cberita/simpanberita" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
-									<fieldset>
-										
-										 <div class="row">
-											<div class="form-group">
-												<div class="col-md-6 col-sm-6">
-													<label>Judul Berita *</label>
-													<input type="text" name="judul" value="" class="form-control required">
-												</div>
-												<div class="col-md-6 col-sm-6">
-													<label>Tanggal Posting *</label>
-													<input type="text" name="tanggal" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="form-group">
-												<div class="col-md-12 col-sm-12">
-													<label>Text Berita *</label>
-													<textarea class="form-control summernote" name="konten" id="pertanyaan"></textarea>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="form-group">
-												<div class="col-md-12">
-													<label>
-														File Attachment 
-														<small class="text-muted">Foto Berita</small>
-													</label>
-													 custom file upload 
-													<div class="fancy-file-upload fancy-file-primary">
-														<i class="fa fa-upload"></i>
-														<input type="file" class="form-control" name="image" />
-														<input type="text" class="form-control" placeholder="no file selected" readonly="" />
-														<span class="button">Choose File</span>
+						</div>	
+						<div class="col-md-10 col-md-10">
+							
+									<ul class="nav nav-tabs">
+										<li class="active"><a href="#home" data-toggle="tab">Input Berita</a></li>
+										<li><a href="#profile" data-toggle="tab">Manage Data Berita</a></li>
+									</ul>
+							
+								<div class="tab-content">
+									<div class="tab-pane fade in active" id="home">
+										<form class="" action="<?php echo base_url();?>/admin/manberita/cberita/simpanberita" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+												<fieldset>
+													
+													 <div class="row">
+														<div class="form-group">
+															<div class="col-md-6 col-sm-6">
+																<label>Judul Berita *</label>
+																<input type="text" name="judul" value="" class="form-control required">
+															</div>
+															<div class="col-md-6 col-sm-6">
+																<label>Tanggal Posting *</label>
+																<input type="text" name="tanggal" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
+															</div>
+														</div>
 													</div>
-													<small class="text-muted block">satu file Max file size: 1Mb (jpeg/jpg/png)</small>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12 col-sm-12">
+																<label>Text Berita *</label>
+																<textarea class="form-control summernote" name="konten" id="pertanyaan"></textarea>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>
+																	File Attachment 
+																	<small class="text-muted">Foto Berita</small>
+																</label>
+																 custom file upload 
+																<div class="fancy-file-upload fancy-file-primary">
+																	<i class="fa fa-upload"></i>
+																	<input type="file" class="form-control" name="image" />
+																	<input type="text" class="form-control" placeholder="no file selected" readonly="" />
+																	<span class="button">Choose File</span>
+																</div>
+																<small class="text-muted block">satu file Max file size: 1Mb (jpeg/jpg/png)</small>
 
+															</div>
+														</div>
+													</div>
+
+												</fieldset>
+
+												<div class="row">
+													<div class="col-md-12">
+														<button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block margin-top-30">
+															POSTING BERITA
+														</button>
+													</div>
 												</div>
-											</div>
-										</div>
 
-									</fieldset>
-
-									<div class="row">
-										<div class="col-md-12">
-											<button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block margin-top-30">
-												POSTING BERITA
-											</button>
-										</div>
+											</form> 
 									</div>
+									<div class="tab-pane fade" id="profile">
+										<table class="table table-striped table-bordered" id="sample_editable_1">
 
-								</form>  
- 								
+											<thead>
+												<tr>
+													<th>NO</th>
+													<th>Judul</th>
+													<th>Tanggal Posting</th>
+													<th>Status Posting</th>
+													<th>Manage</th>
+												</tr>
+											</thead>
+											<tbody>
+														<?php  
+										               		$n=1;
+								           					if($fetch_data->num_rows() > 0)
+								           					{  
+								                				foreach($fetch_data->result() as $row)
+								                				{  ?>
+												
+												<tr>													
+													<td><?php echo $n++ ?></td>
+													<td><?php echo $row->judul ?></td>
+													<td><?php echo $row->tanggal ?></td>
+													<td><?php echo $row->aktif ?></td>
+													<td>X</td>
+												</tr>
+												<?php } } ?>
+											
+											</tbody>
+										</table>
 
-
-							</div>
-
-							<div class="panel-footer">
-								TYPE FOOTER HERE ....
-							</div>
-						</div>
-						<!-- /Useful Elements -->
-						</div>
+									</div>
+								</div>
+								
+							
+					     </div>
+					 	</div>
 					</div>
-
 				</div>
 			</section>
 			<!-- / -->

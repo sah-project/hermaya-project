@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'syslanding';
-$route['admin'] = 'admin/sysadmin';
+$route['admin'] = 'admin/manberita/cberita';
 $route['summernote'] = 'syslanding/summernote';
 $route['admin/manage-berita'] = 'admin/manberita/cberita';
 $route['admin/berita'] = 'admin/manberita/cberita/show_berita';

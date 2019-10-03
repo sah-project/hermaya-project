@@ -13,11 +13,14 @@ class cberita  extends CI_Controller {
 
    public function index(){
         $data = array (
+            'fetch_data' => $this->model_berita->fetch_data(),
             'sheader' => 'admin/ext/sheader',
+            'sheader_datatable' => 'admin/ext/sheader-datatable',
             'header' => 'admin/vmenu/header',
             'content' => 'admin/pages/index',
             'footer'=> 'admin/vfooter/footer',
             'sfooter'=> 'admin/ext/sfooter',     
+            'sfooter_datatable'=> 'admin/ext/sfooter-datatable',
         );
         $this->load->view("admin/index", $data);
     }
