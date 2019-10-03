@@ -78,6 +78,14 @@ class cberita  extends CI_Controller {
         $this->load->view("dashboard/index", $data);
     }
 
-    
+
+    public function hps_berita($id)
+    {
+        if (!isset($id)) show_404();
+        if ($this->model_berita->hps_berita($id)) {
+            redirect(site_url('admin/manage-berita'));
+        }
+    }
+
 
 }

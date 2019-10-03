@@ -118,8 +118,20 @@
 													<td><?php echo $n++ ?></td>
 													<td><?php echo $row->judul ?></td>
 													<td><?php echo $row->tanggal ?></td>
-													<td><?php echo $row->aktif ?></td>
-													<td>X</td>
+													<td><?php
+																if ($row->aktif=='0'){
+																	echo "<span class='label label-sm label-success'>Posted</span>";
+																}
+																else {
+																	echo "<span class='label label-sm label-danger'>Nonaktif</span>";
+																} 
+															?>
+													 </td>
+													<td>
+														<a href="#" class="btn btn-xs btn-3d btn-teal"><i class="glyphicon glyphicon-pencil"></i>Edit</a>
+														<a onclick="deleteConfirm('<?php echo site_url('admin/manberita/cberita/hps_berita/'.$row->id) ?>')" class="btn btn-xs btn-3d btn-red"><i class="glyphicon glyphicon-trash"></i>Hapus</a>
+														
+													</td>
 												</tr>
 												<?php } } ?>
 											
@@ -136,3 +148,24 @@
 				</div>
 			</section>
 			<!-- / -->
+
+			<!-- MODAL	 -->
+
+				<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Yakin Ingin Hapus?</h5>
+				        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">×</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
+				      <div class="modal-footer">
+				        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+				        <a id="btn-delete" class="btn btn-danger" href="#">Delete</a>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			<!-- END MODAL -->
