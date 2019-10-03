@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-sugi was here
-=======
-aris was here
->>>>>>> c1f1126a7c9e31f99157ee0f869e6a9dc816b558
