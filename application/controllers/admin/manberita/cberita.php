@@ -19,16 +19,17 @@ class cberita  extends CI_Controller {
             'footer'=> 'admin/vfooter/footer',
             'sfooter'=> 'admin/ext/sfooter',     
         );
-        $this->load->view("dashboard/index", $data);
+        $this->load->view("admin/index", $data);
     }
 
     public function simpanberita (){          
-        if (!empty($_POST)) {   
 
+
+        if (!empty($_POST)) {   
             $data = array(
                 'tanggal' => $this->security->xss_clean($this->input->post('tanggal')),
                 'judul' =>$this->security->xss_clean($this->input->post('judul')),
-                'konten' =>$this->security->xss_clean($this->input->post('konten')),
+                'konten' =>$this->input->post('konten'),
                 );
             $action = $this->model_berita->simpan_berita($data);
                 if ($action==true) {
@@ -40,5 +41,19 @@ class cberita  extends CI_Controller {
           redirect('master');
         } 
     }
+
+       public function show_berita(){
+        $data = array (
+            'fetch_data' => $this->model_berita->fetch_data(),
+            'sheader' => 'admin/ext/sheader',
+            'header' => 'admin/vmenu/header',
+            'content' => 'admin/pages/berita/show',
+            'footer'=> 'admin/vfooter/footer',
+            'sfooter'=> 'admin/ext/sfooter',     
+        );
+        $this->load->view("dashboard/index", $data);
+    }
+
+    
 
 }

@@ -51,8 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'syslanding';
 $route['admin'] = 'admin/sysadmin';
+$route['summernote'] = 'syslanding/summernote';
 $route['admin/manage-berita'] = 'admin/manberita/cberita';
-
+$route['admin/berita'] = 'admin/manberita/cberita/show_berita';
 $route['landing'] = 'dashboard/landing';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

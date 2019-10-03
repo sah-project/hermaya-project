@@ -38,18 +38,18 @@
 								<h2 class="panel-title">Form Posting Berita</h2>
 							</div>
 							<div class="panel-body">
-								<form class="" action="<?php echo base_url(); ?>/admin/manberita/cberita/simpanberita" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+								<form class="" action="<?php echo base_url();?>/admin/manberita/cberita/simpanberita" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
 									<fieldset>
-										<!-- required [php action request] -->
-										<div class="row">
+										
+										 <div class="row">
 											<div class="form-group">
 												<div class="col-md-6 col-sm-6">
 													<label>Judul Berita *</label>
-													<input type="text" required="required" name="judul" value="" class="form-control required">
+													<input type="text" name="judul" value="" class="form-control required">
 												</div>
 												<div class="col-md-6 col-sm-6">
 													<label>Tanggal Posting *</label>
-													<input required="required" type="text" name="tanggal" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
+													<input type="text" name="tanggal" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
 												</div>
 											</div>
 										</div>
@@ -68,14 +68,14 @@
 														File Attachment 
 														<small class="text-muted">Foto Berita</small>
 													</label>
-													<!-- custom file upload -->
+													 custom file upload 
 													<div class="fancy-file-upload fancy-file-primary">
 														<i class="fa fa-upload"></i>
-														<input type="file" class="form-control" name="contact[attachment]" onchange="jQuery(this).next('input').val(this.value);" />
+														<input type="file" class="form-control" name="image" />
 														<input type="text" class="form-control" placeholder="no file selected" readonly="" />
 														<span class="button">Choose File</span>
 													</div>
-													<small class="text-muted block">Max file size: 10Mb (jpeg/jpg/png)</small>
+													<small class="text-muted block">satu file Max file size: 1Mb (jpeg/jpg/png)</small>
 
 												</div>
 											</div>
@@ -91,7 +91,8 @@
 										</div>
 									</div>
 
-								</form>
+								</form>  
+ 								
 
 
 							</div>

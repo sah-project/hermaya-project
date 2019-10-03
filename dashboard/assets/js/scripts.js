@@ -2691,6 +2691,7 @@
 						}
 
 						jQuery(this).summernote({
+							
 							height: jQuery(this).attr('data-height') || 200,
 							lang: 	jQuery(this).attr('data-lang') || 'en-US', // default: 'en-US'
 							toolbar: [
@@ -2701,7 +2702,7 @@
 								['color', 		['color']],
 								['para', 		['ul', 'ol', 'paragraph']],
 								['table', 		['table']],
-								['media', 		['link', 'picture', 'video']],
+								// ['media', 		['link', 'picture', 'video']],
 								['misc', 		['codeview', 'fullscreen', 'help']]
 							]
 						});
