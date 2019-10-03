@@ -10,13 +10,6 @@ class Model_berita extends CI_Model
         return $this->db->get_where($this->_table, ["id" => $id])->row();
     }
 
-    public function save_master($master)
-    {
-        $this->db->set($data);  
-        $this->db->insert($this->_table, $master);
-        return true;
-    }
-
     public function fetch_data()  
       {  
            $query = $this->db->query("select * from berita");
@@ -47,6 +40,27 @@ class Model_berita extends CI_Model
             return array_map('unlink', glob(FCPATH."upload/berita/$filename"));
         }
     }
+
+
+      public  function upd_berita($data, $id)
+     {
+      if (!empty($data["image"]))
+        {
+          $this->_deleteImage($id);
+          $this->db->set($data);  
+          $this->db->update($this->_table, $this, array('id' => $id));
+          return true_upd_gambar;
+      }
+      else {
+        $this->db->set($data);  
+        $this->db->query("update berita set tanggal='$data[tanggal]', judul='$data[judul]', konten='$data[konten]' where id='$id'");
+        return true_no_upd_gambar;
+      }
+    
+     }
+
+
+    // 
   
 }   
 ?>

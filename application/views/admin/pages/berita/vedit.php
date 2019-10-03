@@ -38,7 +38,7 @@
 							
 								<div class="tab-content">
 									<div class="tab-pane fade in active" id="home">
-										<form class="" action="<?php echo base_url();?>/admin/manberita/cberita/simpanberita" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+										<form class="" action="<?php echo site_url('/admin/manberita/cberita/upd_berita/'.$berita->id)?>" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
 												<fieldset>
 													
 													 <div class="row">

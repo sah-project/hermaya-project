@@ -34,10 +34,14 @@ class cberita  extends CI_Controller {
                 'image' =>$_FILES['image']['name'],
                 );
             $action = $this->model_berita->simpan_berita($data);
-                if ($action==true) {
+                if ($action==true_upd_gambar) {
                     $this->image = $this->_uploadImage();
                     redirect('admin/manage-berita');
-                } else {
+                } 
+                elseif ($action==true_no_upd_gambar) {
+                   redirect('admin/manage-berita');  
+                }
+                else {
                     echo "something wrong";
                 }  
         } else {    
@@ -102,6 +106,28 @@ class cberita  extends CI_Controller {
             redirect(site_url('admin/manage-berita'));
         }
     }
+
+
+    public function upd_berita ($id){          
+        if (!empty($_POST)) {   
+            $data = array(
+                'tanggal' => $this->security->xss_clean($this->input->post('tanggal')),
+                'judul' =>$this->security->xss_clean($this->input->post('judul')),
+                'konten' =>$this->input->post('konten'),
+                'image' =>$_FILES['image']['name'],
+                );
+            $action = $this->model_berita->upd_berita($data, $id);
+                if ($action==true) {
+                    $this->image = $this->_uploadImage();
+                    redirect('admin/manage-berita');
+                } else {
+                    echo "something wrong";
+                }  
+        } else {    
+          redirect('master');
+        } 
+    }
+
 
 
 }
