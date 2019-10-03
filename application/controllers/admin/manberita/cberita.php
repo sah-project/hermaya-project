@@ -17,12 +17,12 @@ class cberita  extends CI_Controller {
             'sheader' => 'admin/ext/sheader',
             'sheader_datatable' => 'admin/ext/sheader-datatable',
             'header' => 'admin/vmenu/header',
-            'content' => 'admin/pages/index',
+            'content' => 'admin/pages/berita/vberita',
             'footer'=> 'admin/vfooter/footer',
             'sfooter'=> 'admin/ext/sfooter',     
             'sfooter_datatable'=> 'admin/ext/sfooter-datatable',
         );
-        $this->load->view("admin/index", $data);
+        $this->load->view("admin/pages/index", $data);
     }
 
     public function simpanberita (){          
@@ -95,7 +95,7 @@ class cberita  extends CI_Controller {
             'sfooter'=> 'admin/ext/sfooter',     
             'sfooter_datatable'=> 'admin/ext/sfooter-datatable',
         );
-        $this->load->view("admin/index", $data);
+        $this->load->view("admin/pages/index", $data);
     }
 
 
