@@ -33,12 +33,12 @@
 						<div class="col-md-10 col-md-10">
 							
 									<ul class="nav nav-tabs">
-										<li class="active"><a href="#home" data-toggle="tab">Input Berita</a></li>
-										<li><a href="#profile" data-toggle="tab">Manage Data Berita</a></li>
+										<li><a href="#home" data-toggle="tab">Input Berita</a></li>
+										<li class="active"><a href="#profile" data-toggle="tab">Manage Data Berita</a></li>
 									</ul>
 							
 								<div class="tab-content">
-									<div class="tab-pane fade in active" id="home">
+									<div class="tab-pane fade in" id="home">
 										<form class="" action="<?php echo base_url();?>/admin/manberita/cberita/simpanberita" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
 												<fieldset>
 													
@@ -94,7 +94,7 @@
 
 											</form> 
 									</div>
-									<div class="tab-pane fade" id="profile">
+									<div class="tab-pane fade in active" id="profile">
 										<table class="table table-striped table-bordered" id="sample_editable_1">
 
 											<thead>
