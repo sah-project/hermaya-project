@@ -128,7 +128,7 @@
 															?>
 													 </td>
 													<td>
-														<a href="#" class="btn btn-xs btn-3d btn-teal"><i class="glyphicon glyphicon-pencil"></i>Edit</a>
+														<a href="<?php echo site_url('/admin/manberita/cberita/edit_berita/'.$row->id)?>" class="btn btn-xs btn-3d btn-teal"><i class="glyphicon glyphicon-pencil"></i>Edit</a>
 														<a onclick="deleteConfirm('<?php echo site_url('admin/manberita/cberita/hps_berita/'.$row->id) ?>')" class="btn btn-xs btn-3d btn-red"><i class="glyphicon glyphicon-trash"></i>Hapus</a>
 														
 													</td>

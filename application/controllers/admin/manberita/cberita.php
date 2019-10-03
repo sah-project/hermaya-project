@@ -79,6 +79,22 @@ class cberita  extends CI_Controller {
     }
 
 
+      public function edit_berita($id){
+        $data = array (
+            
+            'berita'=>$this->model_berita->getById($id),
+            'sheader' => 'admin/ext/sheader',
+            'sheader_datatable' => 'admin/ext/sheader-datatable',
+            'header' => 'admin/vmenu/header',
+            'content' => 'admin/pages/berita/vedit',
+            'footer'=> 'admin/vfooter/footer',
+            'sfooter'=> 'admin/ext/sfooter',     
+            'sfooter_datatable'=> 'admin/ext/sfooter-datatable',
+        );
+        $this->load->view("admin/index", $data);
+    }
+
+
     public function hps_berita($id)
     {
         if (!isset($id)) show_404();
