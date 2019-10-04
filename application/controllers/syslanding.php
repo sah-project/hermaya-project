@@ -19,9 +19,4 @@ class syslanding extends CI_Controller {
         );
         $this->load->view("dashboard/index", $data);
     }
-
-
-       public function summernote(){
-        $this->load->view("admin/summernote");
-    }
 }

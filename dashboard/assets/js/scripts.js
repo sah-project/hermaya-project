@@ -2674,7 +2674,6 @@
 			<textarea class="summernote form-control" data-height="200"></textarea>
 		 ***************************** **/
 		var _container_1 = jQuery('textarea.summernote');
-
 		
 		if(_container_1.length > 0) {
 			
@@ -2692,8 +2691,6 @@
 						}
 
 						jQuery(this).summernote({
-							
-							
 							height: jQuery(this).attr('data-height') || 200,
 							lang: 	jQuery(this).attr('data-lang') || 'en-US', // default: 'en-US'
 							toolbar: [
@@ -2704,14 +2701,11 @@
 								['color', 		['color']],
 								['para', 		['ul', 'ol', 'paragraph']],
 								['table', 		['table']],
-								// ['media', 		['link', 'picture', 'video']],
+								['media', 		['link', 'picture', 'video']],
 								['misc', 		['codeview', 'fullscreen', 'help']]
 							]
 						});
 					});
-
-
-
 
 				}
 			});

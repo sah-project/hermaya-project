@@ -9,22 +9,11 @@
 						</button>
 						<!-- BUTTONS -->
 						<ul class="pull-right nav nav-pills nav-second-main">
-						<!-- QUICK SHOP CART -->
+							<!-- QUICK SHOP CART -->
 							<li class="quick-cart">
-								<a href="#">
-									<span class="badge badge-aqua btn-xs badge-corner"></span>
-									<i class="fa fa-user"></i> AKUN
+								<a class="pull-right" href="#">
+									<i class="fa fa-user"></i> 
 								</a>
-								<div class="quick-cart-box">
-									<div class="quick-cart-wrapper">
-										<a href="#"><!-- cart item -->
-											<i class="fa fa-expeditedssl"></i> Ganti Password
-										</a><!-- /cart item -->
-										<a href="<?php echo base_url('logout') ?>">
-											<i class="fa fa-sign-out"></i> Log Out
-										</a>
-									</div>
-								</div>
 							</li>
 							<!-- /QUICK SHOP CART -->
 						</ul>
@@ -36,8 +25,14 @@
 					<div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
 							<nav class="nav-main">
 								<ul id="topMain" class="nav nav-pills nav-main">
+									<!-- HOME -->
+									<li class="<?php echo $this->uri->segment(2) == '' ? 'active': '' ?>">
+										<a href="#slider">
+											HOME
+										</a>
+									</li>
 									<!-- MANAGE BERITA -->
-									<li class="<?php echo $this->uri->segment(2) == 'berita' ? 'active': '' ?>">
+									<li class="<?php echo $this->uri->segment(2) == 'manage-berita' ? 'active': '' ?>">
 										<a href="#">
 											MANAGEMENT BERITA
 										</a>
@@ -45,7 +40,7 @@
 									<!-- PAGES -->
 									<li class="dropdown <?php echo $this->uri->segment(2) == 'manage-data' ? 'active': '' ?>">
 										<a class="dropdown-toggle" href="#">
-											MANAGEMENT USER
+											MANAGEMENT DATA
 										</a>
 										<ul class="dropdown-menu">
 											<li><a href="page-careers.html">APBD</a></li>
@@ -53,7 +48,6 @@
 											<li><a href="page-sitemap.html">RKJM</a></li>
 										</ul>
 									</li>
-									
 								</ul>
 							</nav>
 						</div>
