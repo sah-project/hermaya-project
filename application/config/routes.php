@@ -50,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'syslanding';
+$route['login'] = 'syslogin';
+$route['logout'] = 'syslogin/logout';
 $route['admin'] = 'admin/manberita/cberita';
 $route['admin/berita/manage-berita'] = 'admin/manberita/cberita';
 $route['admin/berita/manage-gallery'] = 'admin/manberita/cberita/gallery';

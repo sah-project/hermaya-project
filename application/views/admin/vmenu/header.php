@@ -9,11 +9,22 @@
 						</button>
 						<!-- BUTTONS -->
 						<ul class="pull-right nav nav-pills nav-second-main">
-							<!-- QUICK SHOP CART -->
+						<!-- QUICK SHOP CART -->
 							<li class="quick-cart">
-								<a class="pull-right" href="#">
-									<i class="fa fa-user"></i> 
+								<a href="#">
+									<span class="badge badge-aqua btn-xs badge-corner"></span>
+									<i class="fa fa-user"></i> AKUN
 								</a>
+								<div class="quick-cart-box">
+									<div class="quick-cart-wrapper">
+										<a href="#"><!-- cart item -->
+											<i class="fa fa-expeditedssl"></i> Ganti Password
+										</a><!-- /cart item -->
+										<a href="<?php echo base_url('logout') ?>">
+											<i class="fa fa-sign-out"></i> Log Out
+										</a>
+									</div>
+								</div>
 							</li>
 							<!-- /QUICK SHOP CART -->
 						</ul>
@@ -42,6 +53,7 @@
 											<li><a href="page-sitemap.html">RKJM</a></li>
 										</ul>
 									</li>
+									
 								</ul>
 							</nav>
 						</div>

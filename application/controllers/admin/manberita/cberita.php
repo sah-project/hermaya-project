@@ -6,6 +6,9 @@ class cberita  extends CI_Controller {
    public function __construct()
     {
         parent::__construct();
+       if($this->session->userdata('status') != "login"){
+            redirect(base_url("login"));
+        }
         $this->load->model('admin/model_berita');
         $this->load->library('form_validation');
 
