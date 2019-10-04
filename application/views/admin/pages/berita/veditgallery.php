@@ -23,8 +23,8 @@
 									<h4>MANAGEMENT</h4>
 								</div>
 								<ul class="list-group list-unstyled">
-									<li class="list-group-item active"><a href="<?php echo base_url() ?>admin/berita/manage-berita">Berita dan Agenda</a></li>
-									<li class="list-group-item"><a href="<?php echo base_url() ?>admin/berita/manage-gallery">Gallery</a></li>
+									<li class="list-group-item"><a href="<?php echo base_url() ?>admin/berita/manage-berita">Berita dan Agenda</a></li>
+									<li class="list-group-item active"><a href="<?php echo base_url() ?>admin/berita/manage-gallery">Gallery</a></li>
 									
 								</ul>
 							</div>
@@ -32,31 +32,23 @@
 						</div>	
 						<div class="col-md-10 col-md-10">
 									<ul class="nav nav-tabs">
-										<li class="active"><a href="#home" data-toggle="tab">Form Edit Berita</a></li>
+										<li class="active"><a href="#home" data-toggle="tab">Form Edit Gambar</a></li>
 										
 									</ul>
 							
 								<div class="tab-content">
 									<div class="tab-pane fade in active" id="home">
-										<form class="" action="<?php echo base_url('admin/manberita/cberita/upd_berita/'.$berita->id);?>" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+										<form class="" action="<?php echo base_url('admin/manberita/cberita/upd_gallery/'.$gallery->id);?>" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
 												<fieldset>													
 													 <div class="row">
 														<div class="form-group">
 															<div class="col-md-6 col-sm-6">
 																<label>Judul Berita *</label>
-																<input type="text" name="judul" value="<?php echo $berita->judul ?>" class="form-control required">
+																<input type="text" name="caption" value="<?php echo $gallery->caption ?>" class="form-control required">
 															</div>
 															<div class="col-md-6 col-sm-6">
 																<label>Tanggal Posting *</label>
-																<input type="text" name="tanggal" value="<?php echo $berita->tanggal ?>" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-12 col-sm-12">
-																<label>Text Berita *</label>
-																<textarea class="form-control summernote" name="konten" id="pertanyaan"><?php echo $berita->konten ?></textarea>
+																<input type="text" name="tanggal" value="<?php echo $gallery->tanggal ?>" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
 															</div>
 														</div>
 													</div>
@@ -64,10 +56,10 @@
 														<div class="form-group">
 															<div class="col-md-12">
 																<label>
-																	File Attachment 
-																	<small class="text-muted">Foto Berita</small>
+																	File Attachment
+																	<small class="text-muted">Baru</small>
 																</label>
-																 custom file upload 
+																 Silahkan pulih file baru jika ingin mengganti foto sebelumnya 
 																<div class="fancy-file-upload fancy-file-primary">
 																	<i class="fa fa-upload"></i>
 																	<input type="file" class="form-control" name="image" />
@@ -84,8 +76,8 @@
 
 												<div class="row">
 													<div class="col-md-12">
-														<button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block margin-top-30">
-															POSTING BERITA
+														<button type="submit" class="btn btn-3d btn-success btn-xlg btn-block margin-top-30">
+															<i class="fa fa-upload"></i>RE-UPLOAD
 														</button>
 													</div>
 												</div>
@@ -103,23 +95,4 @@
 			</section>
 			<!-- / -->
 
-			<!-- MODAL	 -->
-
-				<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				  <div class="modal-dialog" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="exampleModalLabel">Yakin Ingin Hapus?</h5>
-				        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">×</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
-				      <div class="modal-footer">
-				        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-				        <a id="btn-delete" class="btn btn-danger" href="#">Delete</a>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-			<!-- END MODAL -->
+			
