@@ -39,18 +39,18 @@
 							
 								<div class="tab-content">
 									<div class="tab-pane fade in" id="home">
-										<form class="" action="<?php echo base_url();?>admin/manberita/cberita/simpangallery" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+										<form class="" action="<?php echo base_url();?>admin/manberita/cberita/simpangallery" method="post" enctype="multipart/form-data" data-toastr-position="top-right">
 												<fieldset>
 													
 													 <div class="row">
 														<div class="form-group">
 															<div class="col-md-6 col-sm-6">
 																<label>Caption *</label>
-																<input type="text" name="caption" value="" class="form-control required">
+																<input type="text" name="caption" value="" required="" class="form-control required">
 															</div>
 															<div class="col-md-6 col-sm-6">
 																<label>Tanggal Posting *</label>
-																<input type="date" name="tanggal" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
+																<input type="date" required="" name="tanggal" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
 															</div>
 														</div>
 													</div>
@@ -65,7 +65,7 @@
 																<div class="fancy-file-upload fancy-file-primary">
 																	<i class="fa fa-upload"></i>
 																	<input type="file" class="form-control" name="image" />
-																	<input type="text" class="form-control" placeholder="no file selected" readonly="" />
+																	<input type="text" class="form-control" placeholder="no file selected" required="" readonly="" />
 																	<span class="button">Choose File</span>
 																</div>
 																<small class="text-muted block">pilih satu file Max file size: 1Mb (jpeg/jpg/png)</small>

@@ -36,7 +36,12 @@ class cberita  extends CI_Controller {
                 );
             $action = $this->model_berita->simpan_berita($data);
                 if ($action==true) {
-                    $this->image = $this->_uploadImage();
+                    if (!empty($_FILES['image']['name'])) {
+                        $this->image = $this->_uploadImage();
+                    }
+                    else {
+                        redirect('admin/berita/manage-berita');            
+                    }
                 } 
                 else {
                     echo "something wrong";

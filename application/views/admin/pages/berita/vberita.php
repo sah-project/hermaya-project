@@ -45,11 +45,11 @@
 														<div class="form-group">
 															<div class="col-md-6 col-sm-6">
 																<label>Judul Berita *</label>
-																<input type="text" name="judul" value="" class="form-control required">
+																<input type="text" name="judul" value="" required="" class="form-control required">
 															</div>
 															<div class="col-md-6 col-sm-6">
 																<label>Tanggal Posting *</label>
-																<input type="date" name="tanggal" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
+																<input type="date" name="tanggal" value="" required="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
 															</div>
 														</div>
 													</div>
