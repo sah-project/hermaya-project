@@ -25,14 +25,8 @@
 					<div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
 							<nav class="nav-main">
 								<ul id="topMain" class="nav nav-pills nav-main">
-									<!-- HOME -->
-									<li class="<?php echo $this->uri->segment(2) == '' ? 'active': '' ?>">
-										<a href="#slider">
-											HOME
-										</a>
-									</li>
 									<!-- MANAGE BERITA -->
-									<li class="<?php echo $this->uri->segment(2) == 'manage-berita' ? 'active': '' ?>">
+									<li class="<?php echo $this->uri->segment(2) == 'berita' ? 'active': '' ?>">
 										<a href="#">
 											MANAGEMENT BERITA
 										</a>
@@ -40,7 +34,7 @@
 									<!-- PAGES -->
 									<li class="dropdown <?php echo $this->uri->segment(2) == 'manage-data' ? 'active': '' ?>">
 										<a class="dropdown-toggle" href="#">
-											MANAGEMENT DATA
+											MANAGEMENT USER
 										</a>
 										<ul class="dropdown-menu">
 											<li><a href="page-careers.html">APBD</a></li>

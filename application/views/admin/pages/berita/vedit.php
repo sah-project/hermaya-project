@@ -23,24 +23,23 @@
 									<h4>MANAGEMENT</h4>
 								</div>
 								<ul class="list-group list-unstyled">
-									<li class="list-group-item"><a href="shortcode-forms.html">Agenda</a></li>
+									<li class="list-group-item active"><a href="shortcode-forms-pickers.html">Berita dan Agenda</a></li>
 									<li class="list-group-item"><a href="shortcode-forms-masked.html">Gallery</a></li>
-									<li class="list-group-item active"><a href="shortcode-forms-pickers.html">Management Berita</a></li>
+									
 								</ul>
 							</div>
 							<!-- /side navigation -->
 						</div>	
 						<div class="col-md-10 col-md-10">
-							
 									<ul class="nav nav-tabs">
 										<li class="active"><a href="#home" data-toggle="tab">Form Edit Berita</a></li>
+										
 									</ul>
 							
 								<div class="tab-content">
 									<div class="tab-pane fade in active" id="home">
-										<form class="" action="<?php echo site_url('/admin/manberita/cberita/upd_berita/'.$berita->id)?>" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
-												<fieldset>
-													
+										<form class="" action="<?php echo base_url('/admin/manberita/cberita/upd_berita/'.$berita->id);?>" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+												<fieldset>													
 													 <div class="row">
 														<div class="form-group">
 															<div class="col-md-6 col-sm-6">

@@ -34,13 +34,10 @@ class cberita  extends CI_Controller {
                 'image' =>$_FILES['image']['name'],
                 );
             $action = $this->model_berita->simpan_berita($data);
-                if ($action==true_upd_gambar) {
+                if ($action==true) {
                     $this->image = $this->_uploadImage();
-                    redirect('admin/manage-berita');
+                    redirect('admin/berita/manage-berita');
                 } 
-                elseif ($action==true_no_upd_gambar) {
-                   redirect('admin/manage-berita');  
-                }
                 else {
                     echo "something wrong";
                 }  
@@ -103,7 +100,7 @@ class cberita  extends CI_Controller {
     {
         if (!isset($id)) show_404();
         if ($this->model_berita->hps_berita($id)) {
-            redirect(site_url('admin/manage-berita'));
+            redirect(site_url('admin/berita/manage-berita'));
         }
     }
 
@@ -117,10 +114,15 @@ class cberita  extends CI_Controller {
                 'image' =>$_FILES['image']['name'],
                 );
             $action = $this->model_berita->upd_berita($data, $id);
-                if ($action==true) {
+
+            if ($action==true_upd_gambar) {
                     $this->image = $this->_uploadImage();
-                    redirect('admin/manage-berita');
-                } else {
+                    redirect('admin/berita/manage-berita');
+                } 
+                elseif ($action==true_no_upd_gambar) {
+                   redirect('admin/berita/manage-berita');  
+                }
+                else {
                     echo "something wrong";
                 }  
         } else {    
@@ -128,6 +130,43 @@ class cberita  extends CI_Controller {
         } 
     }
 
+   public function gallery(){
+        $data = array (
+            'fetch_data' => $this->model_berita->fetch_data(),
+            'sheader' => 'admin/ext/sheader',
+            'sheader_datatable' => 'admin/ext/sheader-datatable',
+            'header' => 'admin/vmenu/header',
+            'content' => 'admin/pages/berita/vgallery',
+            'footer'=> 'admin/vfooter/footer',
+            'sfooter'=> 'admin/ext/sfooter',     
+            'sfooter_datatable'=> 'admin/ext/sfooter-datatable',
+        );
+        $this->load->view("admin/pages/index", $data);
+    }
+
+
+    public function simpangallery (){          
+        if (!empty($_POST)) {   
+            $data = array(
+                'tanggal' => $this->security->xss_clean($this->input->post('tanggal')),
+                'caption' =>$this->security->xss_clean($this->input->post('caption')),
+                'image' =>$_FILES['image']['name'],
+                );
+            $action = $this->model_berita->simpan_gallery($data);
+                if ($action==true_upd_gambar) {
+                    $this->image = $this->_uploadImage();
+                    redirect('admin/manage-berita');
+                } 
+                elseif ($action==true_no_upd_gambar) {
+                   redirect('admin/manage-berita');  
+                }
+                else {
+                    echo "something wrong";
+                }  
+        } else {    
+          redirect('master');
+        } 
+    }
 
 
 }

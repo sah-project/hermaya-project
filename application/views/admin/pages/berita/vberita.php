@@ -31,7 +31,6 @@
 							<!-- /side navigation -->
 						</div>	
 						<div class="col-md-10 col-md-10">
-							
 									<ul class="nav nav-tabs">
 										<li><a href="#home" data-toggle="tab">Input Berita</a></li>
 										<li class="active"><a href="#profile" data-toggle="tab">Manage Data Berita</a></li>
